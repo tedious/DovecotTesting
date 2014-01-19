@@ -1,6 +1,6 @@
 
 before_script:
-    - tests/SetupEnvironment.sh
+    - ./SetupEnvironment.sh
 
 # Change this to your test script!
 script: netstat -tulpn | grep 143
