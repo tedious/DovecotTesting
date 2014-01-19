@@ -1,0 +1,14 @@
+{
+    "name": "tedivm/dovecottesting",
+    "description": "An IMAP Testing Suite",
+    "keywords": ["email","imap","pop3"],
+    "homepage": "http://github.com/tedivm/DovecotTesting",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert Hafner",
+            "email": "tedivm@tedivm.com"
+        }
+    ]
+}

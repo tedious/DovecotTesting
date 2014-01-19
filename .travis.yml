@@ -4,4 +4,3 @@ before_script:
 
 # Change this to your test script!
 script: netstat -tulpn | grep 143
-
