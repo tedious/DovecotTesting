@@ -5,6 +5,11 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ -n "$TRAVIS" ]; then
 
     echo 'Travis config not yet written'
+
+    if [ -d "$DIR" ]; then
+        DIR="$( dirname $(find ./ -name 'SetupEnvironment.sh') )"
+    fi
+
     sudo cp -Rp $DIR/resources /resources
     sudo /bin/bash /resources/Scripts/Provision.sh
     sudo /bin/bash /resources/Scripts/SSL.sh
