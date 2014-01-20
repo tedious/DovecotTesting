@@ -10,11 +10,12 @@ if [ -n "$TRAVIS" ]; then
 
     echo 'Travis config not yet written'
 
-    if [ ! -d "$DIR" ]; then
+    if [ ! -d "$DIR/resources" ]; then
+        DIR="$( dirname $(find ./ -name 'SetupEnvironment.sh') )"
         DIR="$( dirname $(find $TRAVIS_BUILD_DIR -name '.dovecottestingmark') )"
     fi
 
-    if [ ! -d "$DIR" ]; then
+    if [ ! -d "$DIR/resources" ]; then
         DIR="$( dirname $(find $TRAVIS_BUILD_DIR -name 'SetupEnvironment.sh') )"
     fi
 
