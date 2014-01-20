@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo 'Refreshing the test mailbox- this could take a minute.'
+echo 'Refreshing the test mailbox.'
 
 sudo stop dovecot
 [ -d "/home/testuser/Maildir" ] && sudo rm -R /home/testuser/Maildir

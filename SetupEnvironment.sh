@@ -8,15 +8,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ -n "$TRAVIS" ]; then
 
-    echo 'Travis config not yet written'
+    echo 'Starting Travis Provisioning'
 
     if [ ! -d "$DIR/resources" ]; then
-        DIR="$( dirname $(find ./ -name 'SetupEnvironment.sh') )"
         DIR="$( dirname $(find $TRAVIS_BUILD_DIR -name '.dovecottestingmark') )"
-    fi
-
-    if [ ! -d "$DIR/resources" ]; then
-        DIR="$( dirname $(find $TRAVIS_BUILD_DIR -name 'SetupEnvironment.sh') )"
     fi
 
     sudo cp -Rp $DIR/resources /resources
@@ -26,6 +21,8 @@ if [ -n "$TRAVIS" ]; then
 else
 
     # Since not in travis, lets load up a system with vagrant
+
+    echo 'Starting Vagrant Provisioning'
 
     cd $DIR/vagrant
 
@@ -40,3 +37,5 @@ else
     cd $DIR
 
 fi
+
+echo 'Environment has finished being setup'

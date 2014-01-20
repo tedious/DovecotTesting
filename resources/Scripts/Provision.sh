@@ -14,6 +14,7 @@ else
     sudo echo 'disable_plaintext_auth = no' >> /etc/dovecot/local.conf
     sudo echo 'mail_max_userip_connections = 10000' >> /etc/dovecot/local.conf
     sudo restart dovecot
+    echo 'Dovecot has been installed'
 fi
 
 
@@ -22,9 +23,10 @@ fi
 if getent passwd testuser > /dev/null; then
     echo 'testuser already exists'
 else
-    echo 'Creating User "testuser"'
+    echo 'Creating User "testuser" with password "applesauce"'
     sudo useradd testuser -m -s /bin/bash
-    echo "testuser:applesauce"|sudo chpasswd
+    echo "testuser:applesauce" | sudo chpasswd
+    echo 'User created'
 fi
 
 
@@ -32,5 +34,8 @@ fi
 
 /bin/bash /resources/Scripts/ResetMail.sh
 
-
-echo 'Environment has been provisioned'
+echo ''
+echo ''
+echo 'Dovecot has been provisioned with the test mailbox.'
+echo ''
+echo ''
