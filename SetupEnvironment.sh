@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Tired of trying to decipher whether Travis is showing me cached logs or not.
+date -u
+
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if [ -n "$TRAVIS" ]; then
@@ -8,6 +12,10 @@ if [ -n "$TRAVIS" ]; then
 
     if [ ! -d "$DIR" ]; then
         DIR="$( dirname $(find $TRAVIS_BUILD_DIR -name '.dovecottestingmark') )"
+    fi
+
+    if [ ! -d "$DIR" ]; then
+        DIR="$( dirname $(find $TRAVIS_BUILD_DIR -name 'SetupEnvironment.sh') )"
     fi
 
     sudo cp -Rp $DIR/resources /resources
