@@ -6,7 +6,7 @@ if [ -n "$TRAVIS" ]; then
 
     echo 'Travis config not yet written'
 
-    if [ -d "$DIR" ]; then
+    if [ ! -d "$DIR" ]; then
         DIR="$( dirname $(find ./ -name 'SetupEnvironment.sh') )"
     fi
 
