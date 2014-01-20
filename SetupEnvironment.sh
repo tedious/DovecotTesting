@@ -7,7 +7,7 @@ if [ -n "$TRAVIS" ]; then
     echo 'Travis config not yet written'
 
     if [ ! -d "$DIR" ]; then
-        DIR="$( dirname $(find ./ -name 'SetupEnvironment.sh') )"
+        DIR="$( dirname $(find ./ -name '.dovecottestingmark') )"
     fi
 
     sudo cp -Rp $DIR/resources /resources
