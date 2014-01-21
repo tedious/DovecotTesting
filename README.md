@@ -5,7 +5,7 @@ to use library lets developers run their test suites locally using Vagrant and o
 modifications.
 
 This package can be used for testing libraries in any language. It was originally built to support a PHP library,
-Fetch[https://github.com/tedivm/Fetch], so there is some extra support for PHP developers already built in. I encourage
+[Fetch](https://github.com/tedivm/Fetch), so there is some extra support for PHP developers already built in. I encourage
 everyone to submit feature requests or, even better, pull requests to help make this package more consumable for other
 languages.
 
@@ -25,14 +25,14 @@ environment.
 
 ## Server Settings
 
-> Username: **testuser**
-> Password: **applesauce**
-> IMAP: **143**
-> IMAPS: **993**
-> POP: **110**
-> POPS: **995**
-> Vagrant IP Address: **172.31.1.2**
-> Travis IP Address: **127.0.0.1**
+* Username: **testuser**
+* Password: **applesauce**
+* IMAP: **143**
+* IMAPS: **993**
+* POP: **110**
+* POPS: **995**
+* Vagrant IP Address: **172.31.1.2**
+* Travis IP Address: **127.0.0.1**
 
 
 ## PHP
