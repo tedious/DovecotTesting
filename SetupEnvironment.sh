@@ -10,9 +10,6 @@ if [ -n "$TRAVIS" ]; then
 
     echo 'Starting Travis Provisioning'
 
-    # Keep Travis consistent with Vagrant as far as IP addresses are concerned
-    sudo iptables -t nat -A OUTPUT -d 172.31.1.2 -j DNAT --to-destination 127.0.0.1
-
     if [ ! -d "$DIR/resources" ]; then
         DIR="$( dirname $(find $TRAVIS_BUILD_DIR -name '.dovecottestingmark') )"
     fi
