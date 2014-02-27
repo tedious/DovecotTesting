@@ -3,4 +3,4 @@ before_script:
     - ./SetupEnvironment.sh
 
 # Change this to your test script!
-script: netstat -tulpn | grep 143
+script: netstat -tuln | grep 143
