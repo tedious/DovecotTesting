@@ -7,6 +7,11 @@ echo 'Provisioning Environment with Dovecot and Test Messages'
   if which dovecot > /dev/null; then
     echo 'Dovecot is already installed'
   else
+
+    echo 'Updating apt-get repositories'
+    sudo apt-get -qq update
+
+
     echo 'Installing Dovecot'
     sudo apt-get -qq -y install dovecot-imapd dovecot-pop3d
     sudo touch /etc/dovecot/local.conf
