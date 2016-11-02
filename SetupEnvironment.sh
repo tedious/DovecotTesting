@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Tired of trying to decipher whether Travis is showing me cached logs or not.
 date -u

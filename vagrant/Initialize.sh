@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 /bin/bash /resources/Scripts/Provision.sh
 
