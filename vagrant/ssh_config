@@ -1,0 +1,13 @@
+ServerAliveInterval 30
+ServerAliveCountMax 4
+
+# vagrant box created for testing Dovecot
+Host DovecotTesting
+	User vagrant
+	# Password vagrant
+	HostName 127.0.0.1
+	# Port 2222
+	LocalForward 110 localhost:110
+	LocalForward 143 localhost:143
+	LocalForward 993 localhost:993
+	LocalForward 995 localhost:995
